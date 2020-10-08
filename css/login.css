@@ -1,0 +1,110 @@
+/* 初始化页面 */
+@import url("reset.css");
+
+.main {
+	font-size: 14px;
+	font-family: arial, "Hiragino Sans GB", "Microsoft YaHei", "微軟正黑體", "儷黑 Pro", sans-serif;
+}
+
+a {
+	color: #757575;
+}
+
+/* logo */
+.header-wrap{
+	width: 1130px;
+	margin: 0 auto;
+}
+.header-wrap .header-logo {
+	width: 200px;
+	height: 98px;
+	background: url(../img/login/placeholder.png) no-repeat;
+}
+/* 主要内容 */
+.main-wrap {
+	width: 100%;
+	height: 588px;
+	background-image: url(../img/login/beijing.jpg);
+	background-repeat: no-repeat;
+	background-position:center;
+	position: relative;
+}
+.main-wrap .mian-content {
+	position: absolute;
+	right: 9%;
+	bottom: 0;
+	background-color: #fff;
+	width: 410px;
+	min-height: 556px;
+	font-size: 14px;
+}
+.nav_tabs {
+	padding: 27px 0 24px;
+	text-align: center;
+	font-size: 24px;
+	color: black;
+}
+.nav_tabs a{
+	color: black;
+}
+.nav_tabs a:hover,
+.nav_tabs a.now {
+	color: #f56600;
+}
+.line{
+	border-left: 2px black solid;
+	width: 0;
+	height: 24px;
+	margin: 0 35px;
+}
+
+/* 帐号登录 */
+.login_area {
+	width: 350px;
+	margin: 0 auto;
+}
+.item_account {
+	width: 100%;
+	height: 50px;
+	border: 1px black solid;
+	color: black;
+	padding: 10px 20px;
+	display: block;
+	margin-top: 13px;
+}
+.err_tip {
+	margin-top: 14px;
+	line-height: 20px;
+	color: #ff6700;
+	display: none;
+}
+.zhuce .login_type_link {
+	float: left;
+}
+
+.zhuce .zhuce_area {
+	float: right;
+	color: #999;
+	text-align: center;
+}
+.zhuce .login_type_link a {
+	color: #ff6700;
+	height: auto;
+	line-height: normal;
+}
+
+.zhuce .zhuce_area a {
+	color: #999;
+}
+.zhuce .zhuce_area a:hover{
+	color: #ff6700;
+}
+/* 扫码登录 */
+.code_login{
+	text-align: center;
+	width: 100%;
+	display: none;
+}
+.code_login img{
+	margin: 50px auto;
+}

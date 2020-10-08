@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <link rel="stylesheet" href="./css/shopping.css">
+    <script src="./js/shopping.js"></script>
+</head>
+<body>
+        <div class="container">
+            <div class="car-empty" id="J_carEmpty">
+                <h2>您的购物车还是空的！</h2>
+                <a href="login.html" class="btn-login" id="J_loginBtn">立即登录</a>
+            </div>
+            <div class="car-goods-list" id="J_carListGoods">
+                <div class="list-head myclear" data-checked="false">
+                    <div class="col col-check"><span id="J_selectAll"></span>全选</div>
+                    <div class="col col-img">&nbsp;</div>
+                    <div class="col col-name">商品名称</div>
+                    <div class="col col-price">单价</div>
+                    <div class="col col-num">数量</div>
+                    <div class="col col-total">小计</div>
+                    <div class="col col-action">操作</div>
+                </div>
+                <div id="wapper">
+                    <!-- <div class="list-body myclear" data-checked = "false">
+                        <div class="col col-check"><span class="J_select"></span></div>
+                        <div class="col col-img"><img src="${obj[key].img}" alt=""></div>
+                        <div class="col col-name">${obj[key].name}</div>
+                        <div class="col col-price">${obj[key].proc}元</div>
+                        <div class="col col-num">
+                            <div class="change-goods-num myclear J_changeGoodsNum">
+                                <a href="#" class="J_minus">-</a>
+                                <input tyep="text" value="${obj[key].number}" class="goods-num J_goodsNum">
+                                <a href="#" class="J_plus">+</a>
+                            </div>
+                        </div>
+                        <div class="col col-total">${obj[key].proc * obj[key].number}元</div>
+                        <div class="col col-action">×</div>
+                    </div> -->
+                </div>
+                <div class="car-bar myclear car-bar-fixed">
+                    <div class="section-left">
+                        <a href="index.html" class="back-shopping J_goShoping">继续购物</a>
+                        <span class="car-total">
+                            共
+                            <i id="J_carTotalNum">0</i>
+                            件商品，已选择
+                            <i id="J_selTotalNum">0</i>
+                            件
+                        </span>
+                        <span class="total-price">
+                            合计：<em id="J_carTotalPrice">0</em>元
+                        </span>
+                        <a href="#;" class="btn btn-disabled" id="J_goCheckout">去结算</a>
+                    </div>
+                    <div class="no-select-tip" id="J_noSelectTip">
+                        请勾选需要结算的商品
+                        <i class="arrow arrow-a"></i>
+                        <i class="arrow arrow-b"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

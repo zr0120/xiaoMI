@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <div class="main">
+        <!-- 头部logo -->
+        <header class="header-wrap">
+            <div class="header-logo"></div>
+        </header>
+        <!-- 主要内容 -->
+        <section class="main-wrap">
+            <div class="mian-content">
+                <!-- 选择标题 -->
+                <div id="nav-tabs" class="nav_tabs">
+                    <a class="now" href="#">帐号登录</a>
+                    <span class="line"></span>
+                    <a class="" href="#">扫码登录</a>
+                </div>
+                <div class="loginbox">
+                    <!-- 帐号登录 -->
+                    <div class="btn login_area">
+                        <input class="item_account" type="text" name="user" id="username" placeholder="邮箱/手机号码/小米ID">
+                        <input class="item_account" type="password" placeholder="密码" id="pwd" name="password">
+                        <div id="error" class="err_tip">
+                            ！用户名或密码不正确
+                        </div>
+                        <input class="loginbtn item_account" id="login-button" type="button" value="登录">
+                        <div class="zhuce myclear">
+                            <div class="login_type_link">
+                                <a href="#">手机短信登录/注册</a>
+                            </div>
+                            <div class="zhuce_area">
+                                <a href="register.html">立即注册</a>
+                                <span>|</span>
+                                <a href="#">忘记密码？</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 扫码登录 -->
+                    <div class="code_login">
+                        <img src="./img/login/iframe.png" alt="">
+                        <p class="custom-qr-name">使用<span>小米商城APP</span>扫一扫</p>
+						<p>小米手机可打开「设置」&gt;「小米帐号」扫码登录</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        let xiaomi = {
+            start(){
+                this.loginArea();
+                this.change();
+            },
+            // 登录验证
+            loginArea(){
+                // 获取保存在浏览器中的用户名和密码
+                let phone = sessionStorage.getItem("phone");
+				let idaccount = sessionStorage.getItem("idaccount");
+                let pwd = sessionStorage.getItem("pwd");
+                
+                // 获取节点
+                let username = document.getElementById('username');
+				let pwds = document.getElementById('pwd');
+                let error = document.getElementById('error');
+                let loginBtn = document.getElementById('login-button');
+
+                //登录
+                loginBtn.onclick = function() {
+						if ((phone == username.value || idaccount == username.value) && pwd == pwds.value) {
+							// 跳转到主页面
+							sessionStorage.setItem("loginState", 'true');
+							window.location.href = 'index.html';
+						} else {
+							error.style.display = 'block';
+						}
+					}
+            },
+            change(){
+                //获取节点
+                var navTabs = document.getElementById('nav-tabs').getElementsByTagName('a');
+                var loginbox = document.getElementsByClassName('loginbox')[0].children;
+                //切换登录方式
+                for (let i = 0; i < navTabs.length; i++){
+                    navTabs[i].index = i;
+                    navTabs[i].onclick = function(){
+                        for(let j = 0;j<loginbox.length;j++){
+                            navTabs[j].className='';
+                            loginbox[j].style.display='none';
+                        }
+                        this.className='now';
+                        loginbox[this.index].style.display='block';
+                    }
+                }
+            }
+        }
+        xiaomi.start();
+    </script>
+</body>
+</html>

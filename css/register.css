@@ -1,0 +1,155 @@
+/* 初始化页面 */
+@import url("reset.css");
+
+body {
+	background-color: #f9f9f9;
+	color:black;
+	font-size: 14px;
+	font-family: arial, "Hiragino Sans GB", "Microsoft YaHei", "微軟正黑體", "儷黑 Pro", sans-serif;
+}
+a {
+	color: #9d9d9d;
+}
+
+/* 主要内容 */
+.main {
+	width: 854px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+.main .logo{
+    background-color: #ff6700;
+    width: 49px;
+    height: 49px;
+    margin: 100px auto 50px;
+}
+/* 标题 */
+.title_big30 {
+	text-align: center;
+	font-size: 30px;
+}
+/* 登录页面内容盒子 */
+.regbox {
+	width: 332px;
+	padding: 30px 0;
+	line-height: 20px;
+	font-size: 14px;
+	margin: 0 auto;
+}
+.countryinput{
+	width: 100%;
+	height: 40px;
+	margin: 5px auto 5px;
+	padding: 4px 10px;
+}
+.title-4{
+	margin-top: 10px;
+}
+.err_tip{
+	margin-bottom: 5px;
+	line-height: 20px;
+	font-size: 14px;
+	color: #f66;
+	display: none;
+}
+.phone input{
+	width: 100%;
+	height: 40px;
+	margin: 5px auto 5px;
+	padding: 4px 10px;
+}
+/* 按钮 */
+.btn_reg_1 {
+	background-color: #ff6700;
+	color: #fff;
+	margin-top: 70px;
+}
+
+.btnGroup {
+	width: 330px;
+	height: 42px;
+	margin: 0 auto;
+	line-height: 42px;
+	text-align: center;
+	font-size: 14px;
+	display: block;
+	cursor: pointer;
+	border: 1px solid #e8e8e8;
+	overflow: hidden;
+}
+/* 验证码页面盒子 */
+.regboxTwo,
+.regboxthree,
+.regbox-account { 
+	width: 332px;
+	padding: 30px 0;
+	line-height: 20px;
+	margin: 0 auto;
+	display: none;
+}
+.step2_txt,
+.step2_txt p {
+	padding-bottom: 10px;
+}
+.step2_txt .address-place {
+	color: #ff6700;
+}
+/* 文本框 */
+.regboxTwo .inputcode {
+	margin-top: 10px;
+	width: 332px;
+	height: auto;
+	padding-bottom: 15px;
+}
+.inputcode_txt{
+	width: 210px;
+	height: 40px;
+	margin: 5px auto 5px;
+	padding: 4px 10px;
+}
+.resend{
+	margin-left: 8px;
+	vertical-align: middle;
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #e8e8e8;
+}
+/* 错误提示 */
+.step2_txt .err_tip {
+	margin-bottom: 10px;
+}
+/* 返回按钮 */
+.btn_reg_2 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+/* 设置密码 */
+.regboxthree p {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.regboxthree .title {
+	margin-bottom: 15px;
+}
+.inputpassword{
+	width: 332px;
+	height: 40px;
+	margin: 5px auto 5px;
+	padding: 4px 10px;
+}
+/* 登录 */
+.regbox-account .step2_txt {
+	text-align: center;
+}
+
+.regbox-account p {
+	margin-top: 20px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.regbox-account .btn_reg_1 {
+	margin-top: 58px;
+}

@@ -1,0 +1,55 @@
+/*样式初始化*/
+html, body, div, span, object, iframe,h1, h2, 
+h3, h4, h5, h6, p, blockquote, pre,abbr, address, cite, code,del, dfn, 
+em, img, ins,kbd, q, samp,small, strong, sub, sup, var,b, i,dl, dt, dd, 
+ol, ul, li,fieldset, form, label, legend,table, caption, tbody, 
+tfoot,thead,tr, th, td,article, aside, canvas, details, figcaption, 
+figure, footer, header, hgroup, menu, nav, section, summary,time, mark, 
+audio, video,a,input,textarea,hr,dir{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;    /*将标准的盒子模型转换成IE6的盒子模型*/
+}
+ul{
+	list-style: none;
+}
+
+/* 链接 */
+/* 去掉下换线
+去掉IE 10+ 点击时的灰色背景 */
+a{
+	text-decoration: none;
+}
+input,textarea{
+	outline: none;
+}
+img{
+	border: none;    /* IE7以下的img标签会有边框  */
+}
+/*修改input中提示文字的颜色*/
+input::-webkit-input-placeholder{
+    color:#ccc;
+}
+input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color:#ccc;
+}
+input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+    color:#ccc;
+}
+input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:#ccc;
+}
+
+/*清除浮动的伪类*/
+.myclear::after{
+	content: "";
+	display: block;
+	clear: both;
+	overflow: hidden;
+	height: 0;
+}
+.myclear{
+	zoom: 1;
+}
+
+
